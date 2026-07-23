@@ -30,7 +30,8 @@ name: AMYboard release
 # prerelease + amyboard-dev.vercel.app), which PR previews made redundant.
 
 on:
-  push:
+  workflow_dispatch:
+#  push:
     branches: [ "main" ]
     paths:
       - 'amy'
@@ -42,7 +43,6 @@ on:
       - 'tulip/shared/**'
       - 'tulip/vcvrack/**'
       - '.github/workflows/amyboard-release.yml'
-  workflow_dispatch:
 
 concurrency:
   group: amyboard-release          # serialize releases; never cancel a half-done one
