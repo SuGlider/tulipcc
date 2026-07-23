@@ -23,7 +23,8 @@ name: Tulip firmware release
 # dry-run: everything builds, nothing is uploaded to the release.
 
 on:
-  push:
+  workflow_dispatch:
+#  push:
     branches: [ "main" ]
     paths:
       - 'amy'
@@ -34,7 +35,6 @@ on:
       - 'tulip/macos/**'
       - 'tulip/windows/**'
       - '.github/workflows/tulip-release.yml'
-  workflow_dispatch:
 
 concurrency:
   group: tulip-firmware-release      # serialize releases; never cancel a half-done one
