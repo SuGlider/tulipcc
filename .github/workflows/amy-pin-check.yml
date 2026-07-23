@@ -16,11 +16,12 @@ on:
   pull_request:
     paths:
       - 'amy'
-  push:
+  workflow_dispatch:
+#  push:
     branches: [main]
     paths:
       - 'amy'
-  workflow_dispatch:
+ # workflow_dispatch:
 
 jobs:
   refdocs-fresh:
