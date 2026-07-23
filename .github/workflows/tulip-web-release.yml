@@ -10,7 +10,8 @@ name: Tulip web release
 # Requires repo secret VERCEL_TOKEN (scope: bwhitmans-projects).
 
 on:
-  push:
+  workflow_dispatch:
+#  push:
     branches: [ "main" ]
     paths:
       - 'amy'
@@ -18,7 +19,7 @@ on:
       - 'tulip/shared/**'
       - 'assets/**'
       - '.github/workflows/tulip-web-release.yml'
-  workflow_dispatch:
+#  workflow_dispatch:
 
 concurrency:
   group: tulip-web-release          # serialize prod deploys; never cancel a half-done one
